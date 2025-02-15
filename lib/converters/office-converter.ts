@@ -154,54 +154,82 @@ export class OfficeConverter {
     const lowerLabel = label.toLowerCase();
     const lowerText = text.toLowerCase();
     
-    if (lowerLabel.includes('signature')) {
-      return 'signature';
-    }
-    if (lowerLabel.includes('date')) {
-      return 'date';
-    }
+    // Rating/Assessment Fields
     if (lowerLabel.includes('rating') || lowerLabel.includes('score') || lowerLabel.includes('rank') || 
-        lowerLabel.includes('evaluate') || lowerLabel.includes('assessment')) {
+        lowerLabel.includes('evaluate') || lowerLabel.includes('assessment') ||
+        (text.match(/[1-5]/) && text.match(/poor|fair|good|excellent/i))) {
       return 'rating';
     }
-    if (lowerLabel.includes('website') || lowerLabel.includes('url')) {
+
+    // Signature Fields
+    if (lowerLabel.includes('signature') || 
+        (text.includes('_____') && lowerText.includes('sign'))) {
+      return 'signature';
+    }
+
+    // Date Fields
+    if (lowerLabel.includes('date') || 
+        text.match(/\d{1,2}[/-]\d{1,2}[/-]\d{2,4}/)) {
+      return 'date';
+    }
+
+    // URL Fields
+    if (lowerLabel.includes('website') || lowerLabel.includes('url') ||
+        text.match(/https?:\/\//)) {
       return 'url';
     }
-    if (lowerLabel.includes('salary') || lowerLabel.includes('budget') || lowerLabel.includes('cost')) {
+
+    // Currency Fields
+    if (lowerLabel.includes('salary') || lowerLabel.includes('budget') || 
+        lowerLabel.includes('cost') || text.match(/\$|\€|\£/)) {
       return 'currency';
     }
-    if (lowerLabel.includes('file') || lowerLabel.includes('upload') || lowerLabel.includes('attachment')) {
+
+    // File Upload Fields
+    if (lowerLabel.includes('file') || lowerLabel.includes('upload') || 
+        lowerLabel.includes('attachment') || lowerLabel.includes('document')) {
       return 'file';
     }
-    if (lowerLabel.includes('color') || lowerLabel.includes('theme')) {
+
+    // Color Fields
+    if (lowerLabel.includes('color') || lowerLabel.includes('theme') ||
+        text.match(/#[0-9A-Fa-f]{6}/)) {
       return 'color';
     }
-    if (lowerLabel.includes('explain') || lowerLabel.includes('comment') || lowerLabel.includes('discuss') || 
-        lowerText.includes('what') || lowerText.includes('how') || lowerText.includes('why')) {
+
+    // Textarea Fields
+    if (lowerLabel.includes('explain') || lowerLabel.includes('comment') || 
+        lowerLabel.includes('discuss') || lowerLabel.includes('describe') ||
+        lowerText.includes('what') || lowerText.includes('how') || 
+        lowerText.includes('why') || text.match(/_____+/g)?.length > 1) {
       return 'textarea';
     }
+
+    // Default to input
     return 'input';
   }
 
   private detectRatingScale(text: string): FormField['ratingScale'] | undefined {
     // Look for common rating patterns
-    const numericMatch = text.match(/(\d+)\s*-\s*(\d+)/);
+    const numericMatch = text.match(/(\d+)\s*-\s*(\d+)/) || text.match(/[1-5]/);
     const starMatch = text.match(/(\d+)\s*stars?/i);
     const emojiMatch = text.toLowerCase().includes('emoji') || text.includes('😀') || text.includes('👍');
     
     if (numericMatch) {
-      const min = parseInt(numericMatch[1]);
-      const max = parseInt(numericMatch[2]);
+      const min = parseInt(numericMatch[1]) || 1;
+      const max = parseInt(numericMatch[2]) || 5;
       let labels: Record<number, string> = {};
       
       // Look for label patterns
-      if (text.toLowerCase().includes('poor') && text.toLowerCase().includes('excellent')) {
+      if (text.toLowerCase().match(/poor|fair|good|excellent/)) {
         labels = {
           [min]: 'Poor',
-          [Math.floor((max - min) / 2) + min]: 'Average',
+          [Math.floor((max - min) / 4) + min]: 'Fair',
+          [Math.floor((max - min) / 2) + min]: 'Good',
+          [Math.floor(3 * (max - min) / 4) + min]: 'Very Good',
           [max]: 'Excellent'
         };
-      } else if (text.toLowerCase().includes('disagree') && text.toLowerCase().includes('agree')) {
+      } else if (text.toLowerCase().match(/disagree|agree/)) {
         labels = {
           [min]: 'Strongly Disagree',
           [Math.floor((max - min) / 4) + min]: 'Disagree',
@@ -256,14 +284,14 @@ export class OfficeConverter {
       return parts.length - 1;
     }
     
-    // Check for strong/bold tags
+    // Check for strong/bold tags or all caps (common for section headers)
     const paragraph = paragraphs[index];
-    if (paragraph.querySelector('strong, b')) {
+    if (paragraph.querySelector('strong, b') || text.match(/^[A-Z\s]{5,}:/)) {
       return 1;
     }
     
     // Check for Part/Section markers
-    if (text.match(/^(Part|Section)\s+\d+:/i)) {
+    if (text.match(/^(Part|Section)\s+\d+:|^[A-Z\s]{5,}:/i)) {
       return 1;
     }
     

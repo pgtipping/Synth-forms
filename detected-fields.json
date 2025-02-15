@@ -1,0 +1,84 @@
+[
+  {
+    "title": "Food Tasting Evaluation Form",
+    "fields": [
+      {
+        "type": "input",
+        "label": "Name of Caterer:",
+        "required": false,
+        "validation": [],
+        "section": "Food Tasting Evaluation Form"
+      }
+    ],
+    "level": 1
+  },
+  {
+    "title": "VENDOR EVALUATION",
+    "fields": [],
+    "level": 1
+  },
+  {
+    "title": "CRITERIA",
+    "fields": [],
+    "level": 1
+  },
+  {
+    "title": "5",
+    "fields": [],
+    "level": 1
+  },
+  {
+    "title": "4",
+    "fields": [],
+    "level": 1
+  },
+  {
+    "title": "3",
+    "fields": [],
+    "level": 1
+  },
+  {
+    "title": "2",
+    "fields": [],
+    "level": 1
+  },
+  {
+    "title": "1",
+    "fields": [],
+    "level": 1
+  },
+  {
+    "title": "Table presentation and arrangements of dishing tools and cutleries for ease in serving trainees in the shortest possible time",
+    "fields": [],
+    "level": 1
+  },
+  {
+    "title": "Quality of the dishes presented",
+    "fields": [],
+    "level": 1
+  },
+  {
+    "title": "General cleanliness of waiters and cutleries",
+    "fields": [],
+    "level": 1
+  },
+  {
+    "title": "Sustainability of the varieties presented in view of our cost",
+    "fields": [
+      {
+        "type": "signature",
+        "label": "Signature of assessor",
+        "required": false,
+        "validation": [],
+        "section": "Sustainability of the varieties presented in view of our cost"
+      },
+      {
+        "type": "signature",
+        "label": "Signature of assessor ____________________________",
+        "required": false,
+        "section": "Sustainability of the varieties presented in view of our cost"
+      }
+    ],
+    "level": 1
+  }
+]

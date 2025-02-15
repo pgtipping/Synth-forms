@@ -12,7 +12,7 @@ interface TestResult {
 }
 
 async function testDirectDocxConversion() {
-  const docxPath = join(process.cwd(), '../Free Templates and Forms/Perf Mgt/Employee Performance Evaluation Form dl.docx');
+  const docxPath = join(process.cwd(), 'Free Templates and Forms/Others/Food tasting evaluation form.docx');
   const results: TestResult[] = [];
 
   console.log('\nTesting Direct DOCX Conversion...');
@@ -31,6 +31,7 @@ async function testDirectDocxConversion() {
 
     console.log('Direct DOCX Results:', results[0]);
     await writeFile('conversion-test-results.json', JSON.stringify(results, null, 2));
+    await writeFile('detected-fields.json', JSON.stringify(result.fields, null, 2));
   } catch (error) {
     console.error('Error during direct DOCX conversion:', error);
   }
