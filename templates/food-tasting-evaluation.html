@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Tasting Evaluation Form</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Food Tasting Evaluation Form</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+      <form id="food-tasting-form">
+        <div class="form-group">
+          <label for="event-date">Event Date:</label>
+          <input
+            type="date"
+            id="event-date"
+            name="event-date"
+            title="Event Date"
+            required
+          />
+        </div>
+
+        <div class极地 <div class="form-group">
+          <label for="event-name">Event Name:</label>
+          <input
+            type="text"
+            id="event-name"
+            name="event-name"
+            title="Event Name"
+            placeholder="Enter Event Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="taster-name">Taster's Name:</label>
+          <input
+            type="text"
+            id="taster-name"
+            name极地
+            title="Taster's Name"
+            placeholder="Enter Taster's Name"
+            required
+          />
+        </div>
+
+        <div class="rating-scale">
+          <h3>Food Quality Evaluation</h3>
+          <div class="scale-labels">
+            <span>Poor</span>
+            <span>Fair</span>
+            <span>Good</span>
+            <span>Very Good</span>
+            <span>Excellent</span>
+          </div>
+          <div class="rating-options">
+            <div class="rating-option">
+              <input
+                type="radio"
+                id="taste-1"
+                name="taste"
+                value="1"
+                title="Taste Rating 1"
+              />
+              <label for="taste-1">1</label>
+            </div>
+            <div class="rating-option">
+              <input
+                type="radio"
+                id="taste-2"
+                name="taste"
+                value="2"
+                title="Taste Rating 2"
+              />
+              <label for极地
+            </div>
+            <div class="rating-option">
+              <input
+                type="radio"
+                id="taste-3"
+                name="taste"
+                value="3"
+                title="Taste Rating 3"
+              />
+              <label for="taste-3">3</label>
+            </div>
+            <div class="rating-option">
+              <input
+                type="radio"
+                id="taste-4"
+                name="taste"
+                value="4"
+                title="Taste Rating 4"
+              />
+              <label for="taste-4">4</label>
+            </div>
+            <div class="rating-option">
+              <input
+                type="radio"
+                id="taste-5"
+                name="taste"
+                value="5"
+                title="Taste Rating 5"
+              />
+              <label for="taste-5">5</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Additional Comments:</label>
+          <textarea
+            id="comments"
+            name="comments"
+            title="Additional Comments"
+            placeholder="Enter additional comments"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="special-instructions">Special Instructions/Notes:</label>
+          <textarea
+            id="special-instructions"
+            name="special-instructions"
+            title="Special Instructions"
+            placeholder="Enter any special instructions or notes"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit Evaluation</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

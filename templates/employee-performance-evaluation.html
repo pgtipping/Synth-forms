@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Performance Evaluation</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Employee Performance Evaluation</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+      <form id="performance-evaluation-form">
+        <div class="form-group">
+          <label for="employee-name">Employee Name:</label>
+          <input
+            type="text"
+            id="employee-name"
+            name="employee-name"
+            title="Employee Name"
+            placeholder="Enter Employee Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="position">Position:</label>
+          <input
+            type="text"
+            id="position"
+            name="position"
+            title="Position"
+            placeholder="Enter Position"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="review-period">Review Period:</label>
+          <input
+            type="text"
+            id="review-period"
+            name="review-period"
+            title="Review Period"
+            placeholder="Enter Review Period"
+            required
+          />
+        </div>
+
+        <div class="rating-scale">
+          <h3>Performance Ratings</h3>
+          <div class="scale-labels">
+            <span>Needs Improvement</span>
+            <span>Meets Expectations</span>
+            <span>Exceeds Expectations</span>
+          </div>
+
+          <div class="form-group">
+            <label>Job Knowledge:</label>
+            <div class="rating-options">
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="knowledge-1"
+                  name="knowledge"
+                  value="1"
+                  title="Job Knowledge Rating 1"
+                />
+                <label for="knowledge-1">1</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="knowledge-2"
+                  name="knowledge"
+                  value="2"
+                  title="Job Knowledge Rating 2"
+                />
+                <label for="knowledge-2">2</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="knowledge-3"
+                  name="knowledge"
+                  value="3"
+                  title="Job Knowledge Rating 3"
+                />
+                <label for="knowledge-3">3</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Quality of Work:</label>
+            <div class="rating-options">
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="quality-1"
+                  name="quality"
+                  value="1"
+                  title="Quality of Work Rating 1"
+                />
+                <label for="quality-1">1</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="quality-2"
+                  name="quality"
+                  value="2"
+                  title="Quality of Work Rating 2"
+                />
+                <label for="quality-2">2</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="quality-3"
+                  name="quality"
+                  value="3"
+                  title="Quality of Work Rating 3"
+                />
+                <label for="quality-3">3</label>
+              </div>
+            </极地>
+          </div>
+
+          <div class="form-group">
+            <label>Teamwork:</label>
+            <div class="rating-options">
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="teamwork-1"
+                  name="teamwork"
+                  value="1"
+                  title="Teamwork Rating 1"
+                />
+                <label for="teamwork-1">1</label>
+              </div>
+              <div class="rating-option">
+               极地
+                <input
+                  type="radio"
+                  id="teamwork-2"
+                  name="teamwork"
+                  value="2"
+                  title="Teamwork Rating 2"
+                />
+                <label for="teamwork-2">2</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="teamwork-3"
+                  name="teamwork"
+                  value="3"
+                  title="Teamwork Rating 3"
+                />
+                <label for="teamwork-3">3</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="strengths">Key Strengths:</label>
+          <textarea
+            id="strengths"
+            name="strengths"
+            title="Key Strengths"
+            placeholder="Describe key strengths"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="improvements">Areas for Improvement:</label>
+          <textarea
+            id="improvements"
+            name="improvements"
+            title="Areas for Improvement"
+            placeholder="Describe areas for improvement"
+            rows极地
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="goals">Future Goals:</label>
+          <textarea
+            id="goals"
+            name="goals"
+            title="Future Goals"
+            placeholder="Describe future goals"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="special-instructions">Special Instructions/Notes:</label>
+          <textarea
+            id="special-instructions"
+            name="special-instructions"
+            title="Special Instructions"
+            placeholder="Enter any special instructions or notes"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit Evaluation</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

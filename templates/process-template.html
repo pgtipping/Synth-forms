@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Process Template</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Process Template</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+
+      <form id="process-template-form">
+        <div class="form-section">
+          <h2>Process Overview</h2>
+          <div class="form-group">
+            <label for="process-name">Process Name:</label>
+            <input
+              type="text"
+              id="process-name"
+              placeholder="Enter process name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="process-owner">Process Owner:</label>
+            <input
+              type="text"
+              id="process-owner"
+              placeholder="Enter process owner"
+            />
+          </div>
+          <div class="form-group">
+            <label for="process-description">Process Description:</label>
+            <textarea
+              id="process-description"
+              placeholder="Enter process description"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Process Steps</h2>
+          <table id="process-steps-table">
+            <thead>
+              <tr>
+                <th>Step</th>
+                <th>Description</th>
+                <th>Responsible Role</th>
+                <th>Inputs</th>
+                <th>Outputs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="step-number"
+                    placeholder="Enter step number"
+                  />
+                </td>
+                <td>
+                  <textarea
+                    class="step-description"
+                    placeholder="Enter step description"
+                  ></textarea>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="responsible-role"
+                    placeholder="Enter responsible role"
+                  />
+                </td>
+                <td>
+                  <textarea
+                    class="step-inputs"
+                    placeholder="Enter inputs"
+                  ></textarea>
+                </td>
+                <td>
+                  <textarea
+                    class="step-outputs"
+                    placeholder="Enter outputs"
+                  ></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-process-step">Add Process Step</button>
+        </div>
+
+        <div class="form-section">
+          <h2>Roles and Responsibilities</h2>
+          <table id="roles-table">
+            <thead>
+              <tr>
+                <th>Role</th>
+                <th>Responsibilities</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="role-name"
+                    placeholder="Enter role"
+                  />
+                </td>
+                <td>
+                  <textarea
+                    class="role-responsibilities"
+                    placeholder="Enter responsibilities"
+                  ></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-role">Add Role</button>
+        </div>
+
+        <div class="form-section">
+          <h2>Process Metrics</h2>
+          <table id="metrics-table">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Target</th>
+                <th>Measurement Frequency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="metric-name"
+                    placeholder="Enter metric"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="metric-target"
+                    placeholder="Enter target"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="measurement-frequency"
+                    placeholder="Enter frequency"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-metric">Add Metric</button>
+        </div>
+
+        <div class="form-section">
+          <h2>Approval</h2>
+          <div class="form-group">
+            <label for="approval-date">Approval Date:</label>
+            <input type="date" id="approval-date" />
+          </div>
+          <div class="form-group">
+            <label for="approver-name">Approver Name:</label>
+            <input
+              type="text"
+              id="approver-name"
+              placeholder="Enter approver's name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="approver-signature">Approver Signature:</label>
+            <canvas
+              id="approver-signature-pad"
+              width="400"
+              height="200"
+            ></canvas>
+            <button type="button" id="clear-approver-signature">
+              Clear Signature
+            </button>
+          </div>
+        </div>
+
+        <button type="submit">Submit Process Template</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Succession Planning Form</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Succession Planning Form</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+      <form id="succession-planning-form">
+        <div class="form-group">
+          <label for="position">Position:</label>
+          <input
+            type="text"
+            id="position"
+            name="position"
+            title="Position"
+            placeholder="Enter Position"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="current-holder">Current Holder:</label>
+          <input
+            type="text"
+            id="current-holder"
+            name="current-holder"
+            title="Current Holder"
+            placeholder="Enter Current Holder"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="succession-date">Succession Date:</label>
+          <input
+            type="date"
+            id="succession-date"
+            name="succession-date"
+            title="Succession Date"
+            required
+          />
+        </div>
+
+        <div class="candidate-section">
+          <h3>Primary Candidate</h3>
+          <div class="form-group">
+            <label for="primary-candidate">Candidate Name:</label>
+            <input
+              type="text"
+              id="primary-candidate"
+              name="primary-candidate"
+              title="Primary Candidate Name"
+              placeholder="Enter Primary Candidate Name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="primary-readiness">Readiness Level:</label>
+            <select
+              id="primary-readiness"
+              name="primary-readiness"
+              title="Primary Candidate Readiness"
+              required
+            >
+              <option value="ready-now">Ready Now</option>
+              <option value="1-2-years">1-2 Years</option>
+              <option value="3-5-years">3-5 Years</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="primary-development">Development Needs:</label>
+            <textarea
+              id="primary-development"
+              name="primary-development"
+              title="Primary Candidate Development Needs"
+              placeholder="Describe development needs for primary candidate"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="candidate-section">
+          <h3>Secondary Candidate</h3>
+          <div class="form-group">
+            <label for="secondary-candidate">Candidate Name:</label>
+            <input
+              type="text"
+              id="secondary-candidate"
+              name="secondary-candidate"
+              title="Secondary Candidate Name"
+              placeholder="Enter Secondary Candidate Name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="secondary-readiness">Readiness Level:</label>
+            <select
+              id="secondary-readiness"
+              name="secondary-readiness"
+              title="Secondary Candidate Readiness"
+              required
+            >
+              <option value="ready-now">Ready Now</option>
+              <option value="1-2-years">1-2 Years</option>
+              <option value="3-5-years">3-5 Years</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="secondary-development">Development Needs:</label>
+            <textarea
+              id="secondary-development"
+              name="secondary-development"
+              title="Secondary Candidate Development Needs"
+              placeholder="Describe development needs for secondary candidate"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="risk-assessment">Risk Assessment:</label>
+          <textarea
+            id="risk-assessment"
+            name="risk-assessment"
+            title="Risk Assessment"
+            placeholder="Provide risk assessment details"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="contingency-plan">Contingency Plan:</label>
+          <textarea
+            id="contingency-plan"
+            name="contingency-plan"
+            title="Contingency Plan"
+            placeholder="Provide contingency plan details"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="special-instructions">Special Instructions/Notes:</label>
+          <textarea
+            id="special-instructions"
+            name="special-instructions"
+            title="Special Instructions"
+            placeholder="Enter any special instructions or notes"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit Plan</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

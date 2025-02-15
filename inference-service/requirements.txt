@@ -1,0 +1,12 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+transformers==4.35.2
+torch==2.1.1
+pdf2image==1.16.3
+python-multipart==0.0.6
+Pillow==10.1.0
+opencv-python==4.8.1.78
+pytesseract==0.3.10
+numpy==1.26.2
+pytest==7.4.3
+httpx==0.25.2  # Required for FastAPI TestClient

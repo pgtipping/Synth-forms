@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Feedback Form</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Employee Feedback Form</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+      <form id="employee-feedback-form">
+        <div class="form-group">
+          <label for="employee-name">Employee Name (Optional):</label>
+          <input
+            type="text"
+            id="employee-name"
+            name="employee-name"
+            title="Employee Name"
+            placeholder="Enter Employee Name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department:</label>
+          <input
+            type="text"
+            id="department"
+            name="department"
+            title="Department"
+            placeholder="Enter Department"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="feedback-type">Type of Feedback:</label>
+          <select
+            id="feedback-type"
+            name="feedback-type"
+            title="Feedback Type"
+            required
+          >
+            <option value="suggestion">Suggestion</option>
+            <option value="concern">Concern</option>
+            <option value="compliment">Compliment</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="feedback-category">Category:</label>
+          <select
+            id="feedback-category"
+            name="feedback-category"
+            title="Feedback Category"
+            required
+          >
+            <option value="work-environment">Work Environment</option>
+            <option value="management">Management</option>
+            <option value="processes">Processes</option>
+            <option value="compensation">Compensation</option>
+            <option value="benefits">Benefits</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="feedback-details">Feedback Details:</label>
+          <textarea
+            id="feedback-details"
+            name="feedback-details"
+            title="Feedback Details"
+            placeholder="Enter your feedback details"
+            rows="6"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="suggestions">Suggestions for Improvement:</label>
+          <textarea
+            id="suggestions"
+            name="suggestions"
+            title="Suggestions"
+            placeholder="Enter your suggestions for improvement"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="follow-up"
+            >Would you like a follow-up on this feedback?</label
+          >
+          <select
+            id="follow-up"
+            name="follow-up"
+            title="Follow-up Request"
+            required
+          >
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="special-instructions">Special Instructions/Notes:</label>
+          <textarea
+            id="special-instructions"
+            name="special-instructions"
+            title="Special Instructions"
+            placeholder="Enter any special instructions or notes"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit Feedback</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

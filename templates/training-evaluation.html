@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Training Evaluation Form</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Training Evaluation Form</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+      <form id="training-evaluation-form">
+        <div class="form-group">
+          <label for="training-name">Training Name:</label>
+          <input
+            type="text"
+            id="training-name"
+            name="training-name"
+            title="Training Name"
+            placeholder="Enter Training Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="trainer-name">Trainer Name:</label>
+          <input
+            type="text"
+            id="trainer-name"
+            name="trainer-name"
+            title="Trainer Name"
+            placeholder="Enter Trainer Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="training-date">Training Date:</label>
+          <input
+            type="date"
+            id="training-date"
+            name="training-date"
+            title="Training Date"
+            required
+          />
+        </div>
+
+        <div class="rating-scale">
+          <h3>Training Evaluation</h3>
+          <div class="scale-labels">
+            <span>Poor</span>
+            <span>Fair</span>
+            <span>Good</span>
+            <span>Very Good</span>
+            <span>Excellent</span>
+          </div>
+
+          <div class="form-group">
+            <label>Content Quality:</label>
+            <div class="rating-options">
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="content-1"
+                  name="content"
+                  value="1"
+                  title="Content Quality Rating 1"
+                />
+                <label for="content-1">1</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="content-2"
+                  name="content"
+                  value="2"
+                  title="Content Quality Rating 2"
+                />
+                <label for="content-2">2</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="content-3"
+                  name="content"
+                  value="3"
+                  title="Content Quality Rating 3"
+                />
+                <label for="content-3">3</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="content-4"
+                  name="content"
+                  value="4"
+                  title="Content Quality Rating 4"
+                />
+                <label for="content-4">4</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="content-5"
+                  name="content"
+                  value="5"
+                  title="Content Quality Rating 5"
+                />
+                <label for="content-5">5</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Trainer Effectiveness:</label>
+            <div class="rating-options">
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="trainer-1"
+                  name="trainer"
+                  value="1"
+                  title="Trainer Effectiveness Rating 1"
+                />
+                <label for="trainer-1">1</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="trainer-2"
+                  name="trainer"
+                  value="2"
+                  title="Trainer Effectiveness Rating 2"
+                />
+                <label for="trainer-2">2</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="trainer-3"
+                  name="trainer"
+                  value="3"
+                  title="Trainer Effectiveness Rating 3"
+                />
+                <label for="trainer-3">3</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="trainer-4"
+                  name="trainer"
+                  value="4"
+                  title="Trainer Effectiveness Rating 4"
+                />
+                <label for="trainer-4">4</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="trainer-5"
+                  name="trainer"
+                  value="5"
+                  title="Trainer Effectiveness Rating 5"
+                />
+                <label for="trainer-5">5</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Training Materials:</label>
+            <div class="rating-options">
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="materials-1"
+                  name="materials"
+                  value="1"
+                  title="Training Materials Rating 1"
+                />
+                <label for="materials-1">1</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="materials-2"
+                  name="materials"
+                  value="2"
+                  title="Training Materials Rating 2"
+                />
+                <label for="materials-2">2</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="materials-3"
+                  name="materials"
+                  value="3"
+                  title="Training Materials Rating 3"
+                />
+                <label for="materials-3">3</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="materials-4"
+                  name="materials"
+                  value="4"
+                  title="Training Materials Rating 4"
+                />
+                <label for="materials-4">4</label>
+              </div>
+              <div class="rating-option">
+                <input
+                  type="radio"
+                  id="materials-5"
+                  name="materials"
+                  value="5"
+                  title="Training Materials Rating 5"
+                />
+                <label for="materials-5">5</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="key-takeaways">Key Takeaways:</label>
+          <textarea
+            id="key-takeaways"
+            name="key-takeaways"
+            title="Key Takeaways"
+            placeholder="Describe key takeaways from the training"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="suggestions">Suggestions for Improvement:</label>
+          <textarea
+            id="suggestions"
+            name="suggestions"
+            title="Suggestions for Improvement"
+            placeholder="Provide suggestions for improvement"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="additional-comments">Additional Comments:</label>
+          <textarea
+            id="additional-comments"
+            name="additional-comments"
+            title="Additional Comments"
+            placeholder="Enter any additional comments"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="special-instructions">Special Instructions/Notes:</label>
+          <textarea
+            id="special-instructions"
+            name="special-instructions"
+            title="Special Instructions"
+            placeholder="Enter any special instructions or notes"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit Evaluation</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

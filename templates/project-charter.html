@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Charter</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Project Charter</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+
+      <form id="project-charter-form">
+        <div class="form-section">
+          <h2>Project Overview</h2>
+          <div class="form-group">
+            <label for="project-name">Project Name:</label>
+            <input
+              type="text"
+              id="project-name"
+              placeholder="Enter project name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="project-manager">Project Manager:</label>
+            <input
+              type="text"
+              id="project-manager"
+              placeholder="Enter project manager's name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="project-description">Project Description:</label>
+            <textarea
+              id="project-description"
+              placeholder="Enter project description"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Project Objectives</h2>
+          <div class="form-group">
+            <label for="objectives">Objectives:</label>
+            <textarea
+              id="objectives"
+              placeholder="Enter project objectives"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Project Scope</h2>
+          <div class="form-group">
+            <label for="scope-inclusions">Inclusions:</label>
+            <textarea
+              id="scope-inclusions"
+              placeholder="Enter what is included in the project"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="scope-exclusions">Exclusions:</label>
+            <textarea
+              id="scope-exclusions"
+              placeholder="Enter what is excluded from the project"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Stakeholders</h2>
+          <table id="stakeholders-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Contact Information</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="stakeholder-name"
+                    placeholder="Enter name"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="stakeholder-role"
+                    placeholder="Enter role"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="stakeholder-contact"
+                    placeholder="Enter contact information"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-stakeholder">Add Stakeholder</button>
+        </div>
+
+        <div class="form-section">
+          <h2>Key Milestones</h2>
+          <div class="form-group">
+            <label for="milestones">Milestones:</label>
+            <textarea
+              id="milestones"
+              placeholder="Enter key project milestones"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Approval</h2>
+          <div class="form-group">
+            <label for="approval-date">Approval Date:</label>
+            <input type="date" id="approval-date" />
+          </div>
+          <div class="form-group">
+            <label for="approver-name">Approver Name:</label>
+            <input
+              type="text"
+              id="approver-name"
+              placeholder="Enter approver's name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="approver-signature">Approver Signature:</label>
+            <canvas
+              id="approver-signature-pad"
+              width="400"
+              height="200"
+            ></canvas>
+            <button type="button" id="clear-approver-signature">
+              Clear Signature
+            </button>
+          </div>
+        </div>
+
+        <button type="submit">Submit Charter</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

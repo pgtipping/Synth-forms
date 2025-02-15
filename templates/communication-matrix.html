@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Communication Matrix</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Communication Matrix</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+
+      <form id="communication-matrix-form">
+        <div class="form-section">
+          <h2>Communication Channels</h2>
+          <table id="channels-table">
+            <thead>
+              <tr>
+                <th>Channel</th>
+                <th>Purpose</th>
+                <th>Frequency</th>
+                <th>Responsible Party</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="channel-name"
+                    placeholder="Enter channel"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="channel-purpose"
+                    placeholder="Enter purpose"
+                  />
+                </td>
+                <td>
+                  <select
+                    class="channel-frequency"
+                    title="Communication Frequency"
+                  >
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="quarterly">Quarterly</option>
+                    <option value="as-needed">As Needed</option>
+                  </select>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="responsible-party"
+                    placeholder="Enter responsible party"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-channel">Add Channel</button>
+        </div>
+
+        <div class="form-section">
+          <h2>Audience</h2>
+          <table id="audience-table">
+            <thead>
+              <tr>
+                <th>Stakeholder Group</th>
+                <th>Communication Needs</th>
+                <th>Preferred Channel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="stakeholder-group"
+                    placeholder="Enter stakeholder group"
+                  />
+                </td>
+                <td>
+                  <textarea
+                    class="communication-needs"
+                    placeholder="Enter communication needs"
+                  ></textarea>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="preferred-channel"
+                    placeholder="Enter preferred channel"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-audience">Add Audience</button>
+        </div>
+
+        <div class="form-section">
+          <h2>Approval</h2>
+          <div class="form-group">
+            <label for="approval-date">Approval Date:</label>
+            <input type="date" id="approval-date" />
+          </div>
+          <div class="form-group">
+            <label for="approver-name">Approver Name:</label>
+            <input
+              type="text"
+              id="approver-name"
+              placeholder="Enter approver's name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="approver-signature">Approver Signature:</label>
+            <canvas
+              id="approver-signature-pad"
+              width="400"
+              height="200"
+            ></canvas>
+            <button type="button" id="clear-approver-signature">
+              Clear Signature
+            </button>
+          </div>
+        </div>
+
+        <button type="submit">Submit Matrix</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

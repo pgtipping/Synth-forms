@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Goal Setting Form</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Employee Goal Setting Form</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+      <form id="goal-setting-form">
+        <div class="form-group">
+          <label for="employee-name">Employee Name:</label>
+          <input
+            type="text"
+            id="employee-name"
+            name="employee-name"
+            title="Employee Name"
+            placeholder="Enter Employee Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="manager-name">Manager Name:</label>
+          <input
+            type="text"
+            id="manager-name"
+            name="manager-name"
+            title="Manager Name"
+            placeholder="Enter Manager Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="review-period">Review Period:</label>
+          <input
+            type="text"
+            id="review-period"
+            name="review-period"
+            title="Review Period"
+            placeholder="Enter Review Period"
+            required
+          />
+        </div>
+
+        <div class="goal-section">
+          <h3>Goal 1</h3>
+          <div class="form-group">
+            <label for="goal1-description">Goal Description:</label>
+            <textarea
+              id="goal1-description"
+              name="goal1-description"
+              title="Goal 1 Description"
+              placeholder="Describe Goal 1"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="goal1-measures">Success Measures:</label>
+            <textarea
+              id="goal1-measures"
+              name="goal1-measures"
+              title="Goal 1 Success Measures"
+              placeholder="Describe success measures for Goal 1"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="goal1-timeline">Timeline:</label>
+            <input
+              type="text"
+              id="goal1-timeline"
+              name="goal1-timeline"
+              title="Goal 1 Timeline"
+              placeholder="Enter timeline for Goal 1"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="goal-section">
+          <h3>Goal 2</h3>
+          <div class="form-group">
+            <label for="goal2-description">Goal Description:</label>
+            <textarea
+              id="goal2-description"
+              name="goal2-description"
+              title="Goal 2 Description"
+              placeholder="Describe Goal 2"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="goal2-measures">Success Measures:</label>
+            <textarea
+              id="goal2-measures"
+              name="goal2-measures"
+              title="Goal 2 Success Measures"
+              placeholder="Describe success measures for Goal 2"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="goal2-timeline">Timeline:</label>
+            <input
+              type="text"
+              id="goal2-timeline"
+              name="goal2-timeline"
+              title="Goal 2 Timeline"
+              placeholder="Enter timeline for Goal 2"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="development-areas">Development Areas:</label>
+          <textarea
+            id="development-areas"
+            name="development-areas"
+            title="Development Areas"
+            placeholder="Describe development areas"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="support-needed">Support Needed:</label>
+          <textarea
+            id="support-needed"
+            name="support-needed"
+            title="Support Needed"
+            placeholder="Describe support needed"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="special-instructions">Special Instructions/Notes:</label>
+          <textarea
+            id="special-instructions"
+            name="special-instructions"
+            title="Special Instructions"
+            placeholder="Enter any special instructions or notes"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit Goals</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

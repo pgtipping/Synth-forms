@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Succession Plan</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Succession Plan</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+
+      <form id="succession-plan-form">
+        <div class="form-section">
+          <h2>Key Positions</h2>
+          <table id="positions-table">
+            <thead>
+              <tr>
+                <th>Position</th>
+                <th>Department</th>
+                <th>Criticality</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="position"
+                    placeholder="Enter position"
+                    title="Key Position"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="department"
+                    placeholder="Enter department"
+                    title="Department"
+                  />
+                </td>
+                <td>
+                  <select class="criticality" title="Position Criticality">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-position">Add Position</button>
+        </div>
+
+        <div class="form-section">
+          <h2>Potential Successors</h2>
+          <table id="successors-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Current Position</th>
+                <th>Readiness Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="successor-name"
+                    placeholder="Enter name"
+                    title="Successor Name"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="current-position"
+                    placeholder="Enter current position"
+                    title="Current Position"
+                  />
+                </td>
+                <td>
+                  <select class="readiness" title="Readiness Level">
+                    <option value="ready-now">Ready Now</option>
+                    <option value="1-2-years">1-2 Years</option>
+                    <option value="3-5-years">3-5 Years</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-successor">Add Successor</button>
+        </div>
+
+        <div class="form-section">
+          <h2>Development Plans</h2>
+          <table id="development-table">
+            <thead>
+              <tr>
+                <th>Successor</th>
+                <th>Development Area</th>
+                <th>Target Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <select class="successor-select" title="Select Successor">
+                    <option value="">Select Successor</option>
+                  </select>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="development-area"
+                    placeholder="Enter development area"
+                    title="Development Area"
+                  />
+                </td>
+                <td>
+                  <input type="date" class="target-date" title="Target Date" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-development">
+            Add Development Plan
+          </button>
+        </div>
+
+        <div class="form-section">
+          <h2>Approval</h2>
+          <div class="form-group">
+            <label for="approval-date">Approval Date:</label>
+            <input type="date" id="approval-date" title="Approval Date" />
+          </div>
+          <div class="form-group">
+            <label for="approver-name">Approver Name:</label>
+            <input
+              type="text"
+              id="approver-name"
+              placeholder="Enter approver's name"
+              title="Approver Name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="approver-signature">Approver Signature:</label>
+            <canvas
+              id="approver-signature-pad"
+              width="400"
+              height="200"
+              title="Approver Signature"
+            ></canvas>
+            <button type="button" id="clear-approver-signature">
+              Clear Signature
+            </button>
+          </div>
+        </div>
+
+        <button type="submit">Submit Plan</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

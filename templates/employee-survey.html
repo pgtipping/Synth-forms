@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Survey Form</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Employee Survey Form</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+      <form id="employee-survey-form">
+        <div class="form-group">
+          <label for="department">Department:</label>
+          <input
+            type="text"
+            id="department"
+            name="department"
+            title="Department"
+            placeholder="Enter Department"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="job-satisfaction">Overall Job Satisfaction:</label>
+          <select
+            id="job-satisfaction"
+            name="job-satisfaction"
+            title="Job Satisfaction"
+            required
+          >
+            <option value="very-satisfied">Very Satisfied</option>
+            <option value="satisfied">Satisfied</option>
+            <option value="neutral">Neutral</option>
+            <option value="dissatisfied">Dissatisfied</option>
+            <option value="very-dissatisfied">Very Dissatisfied</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="work-environment">Work Environment Rating:</label>
+          <select
+            id="work-environment"
+            name="work-environment"
+            title="Work Environment Rating"
+            required
+          >
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="poor">Poor</option>
+            <option value="very-poor">Very Poor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="management-support">Management Support Rating:</label>
+          <select
+            id="management-support"
+            name="management-support"
+            title="Management Support Rating"
+            required
+          >
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="poor">Poor</option>
+            <option value="very-poor">Very Poor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="career-growth">Career Growth Opportunities:</label>
+          <select
+            id="career-growth"
+            name="career-growth"
+            title="Career Growth Opportunities"
+            required
+          >
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="poor">Poor</option>
+            <option value="very-poor">Very Poor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="work-life-balance">Work-Life Balance:</label>
+          <select
+            id="work-life-balance"
+            name="work-life-balance"
+            title="Work-Life Balance"
+            required
+          >
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="poor">Poor</option>
+            <option value="very-poor">Very Poor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="suggestions">Suggestions for Improvement:</label>
+          <textarea
+            id="suggestions"
+            name="suggestions"
+            title="Suggestions for Improvement"
+            placeholder="Enter your suggestions for improvement"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="additional-comments">Additional Comments:</label>
+          <textarea
+            id="additional-comments"
+            name="additional-comments"
+            title="Additional Comments"
+            placeholder="Enter any additional comments"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="special-instructions">Special Instructions/Notes:</label>
+          <textarea
+            id="special-instructions"
+            name="special-instructions"
+            title="Special Instructions"
+            placeholder="Enter any special instructions or notes"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit Survey</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

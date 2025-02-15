@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Level Agreement</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Service Level Agreement</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+
+      <form id="sla-form">
+        <div class="form-section">
+          <h2>Parties</h2>
+          <div class="form-group">
+            <label for="provider-name">Service Provider:</label>
+            <input
+              type="text"
+              id="provider-name"
+              placeholder="Enter provider name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="client-name">Client:</label>
+            <input
+              type="text"
+              id="client-name"
+              placeholder="Enter client name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="effective-date">Effective Date:</label>
+            <input type="date" id="effective-date" />
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Service Description</h2>
+          <div class="form-group">
+            <label for="service-description">Description:</label>
+            <textarea
+              id="service-description"
+              placeholder="Enter service description"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="service-hours">Service Hours:</label>
+            <input
+              type="text"
+              id="service-hours"
+              placeholder="Enter service hours"
+            />
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Service Metrics</h2>
+          <table id="metrics-table">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Target</th>
+                <th>Measurement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="metric-name"
+                    placeholder="Enter metric"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="metric-target"
+                    placeholder="Enter target"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="metric-measurement"
+                    placeholder="Enter measurement"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-metric">Add Metric</button>
+        </div>
+
+        <div class="form-section">
+          <h2>Responsibilities</h2>
+          <div class="form-group">
+            <label for="provider-responsibilities"
+              >Provider Responsibilities:</label
+            >
+            <textarea
+              id="provider-responsibilities"
+              placeholder="Enter provider responsibilities"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="client-responsibilities"
+              >Client Responsibilities:</label
+            >
+            <textarea
+              id="client-responsibilities"
+              placeholder="Enter client responsibilities"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Terms & Conditions</h2>
+          <div class="form-group">
+            <label for="terms">Terms:</label>
+            <textarea
+              id="terms"
+              placeholder="Enter terms and conditions"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="termination">Termination Clause:</label>
+            <textarea
+              id="termination"
+              placeholder="Enter termination clause"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Approval</h2>
+          <div class="form-group">
+            <label for="approval-date">Approval Date:</label>
+            <input type="date" id="approval-date" />
+          </div>
+          <div class="form-group">
+            <label for="approver-name">Approver Name:</label>
+            <input
+              type="text"
+              id="approver-name"
+              placeholder="Enter approver's name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="approver-signature">Approver Signature:</label>
+            <canvas
+              id="approver-signature-pad"
+              width="400"
+              height="200"
+            ></canvas>
+            <button type="button" id="clear-approver-signature">
+              Clear Signature
+            </button>
+          </div>
+        </div>
+
+        <button type="submit">Submit SLA</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

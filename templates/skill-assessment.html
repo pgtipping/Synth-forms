@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Assessment Form</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Skill Assessment Form</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+
+      <form id="skill-assessment-form">
+        <div class="form-section">
+          <h2>Employee Information</h2>
+          <div class="form-group">
+            <label for="employee-name">Employee Name:</label>
+            <input
+              type="text"
+              id="employee-name"
+              name="employee-name"
+              title="Employee Name"
+              placeholder="Enter Employee Name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="grade">Grade:</label>
+            <input
+              type="text"
+              id="grade"
+              name="grade"
+              title="Grade"
+              placeholder="Enter Grade"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="department">Department:</label>
+            <input
+              type="text"
+              id="department"
+              name="department"
+              title="Department"
+              placeholder="Enter Department"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="assessment-date">Date:</label>
+            <input
+              type="date"
+              id="assessment-date"
+              name="assessment-date"
+              title="Assessment Date"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="assessment-section">
+          <h2>Communication</h2>
+          <div class="assessment-criteria">
+            <label>Processes received information:</label>
+            <div class="rating-scale">
+              <label
+                >1<input type="radio" name="process-info" value="1"
+              /></label>
+              <label
+                >2<input type="radio" name="process-info" value="2"
+              /></label>
+              <label
+                >3<input type="radio" name="process-info" value="3"
+              /></label>
+              <label
+                >4<input type="radio" name="process-info" value="4"
+              /></label>
+              <label
+                >5<input type="radio" name="process-info" value="5"
+              /></label>
+            </div>
+          </div>
+          <!-- Repeat for other communication criteria -->
+        </div>
+
+        <div class="assessment-section">
+          <h2>Leadership</h2>
+          <div class="assessment-criteria">
+            <label>Leads by example:</label>
+            <div class="rating-scale">
+              <label
+                >1<input type="radio" name="lead-example" value="1"
+              /></label>
+              <label
+                >2<input type="radio" name="lead-example" value="2"
+              /></label>
+              <label
+                >3<input type="radio" name="lead-example" value="3"
+              /></label>
+              <label
+                >4<input type="radio" name="lead-example" value="4"
+              /></label>
+              <label
+                >5<input type="radio" name="lead-example" value="5"
+              /></label>
+            </div>
+          </div>
+          <!-- Repeat for other leadership criteria -->
+        </div>
+
+        <!-- Add sections for Relationships, Project Management, Productivity, Personal Development -->
+
+        <div class="form-section">
+          <h2>Special Instructions/Notes</h2>
+          <textarea
+            id="special-instructions"
+            name="special-instructions"
+            title="Special Instructions"
+            placeholder="Enter any special instructions or notes"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit Assessment</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

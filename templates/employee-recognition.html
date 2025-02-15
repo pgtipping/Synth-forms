@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Recognition Form</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Employee Recognition Form</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+      <form id="recognition-form">
+        <div class="form-group">
+          <label for="employee-name">Employee Name:</label>
+          <input
+            type="text"
+            id="employee-name"
+            name="employee-name"
+            title="Employee Name"
+            placeholder="Enter Employee Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department:</label>
+          <input
+            type="text"
+            id="department"
+            name="department"
+            title="Department"
+            placeholder="Enter Department"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="recognition-type">Type of Recognition:</label>
+          <select
+            id="recognition-type"
+            name="recognition-type"
+            title="Recognition Type"
+            required
+          >
+            <option value="excellence">Excellence in Performance</option>
+            <option value="innovation">Innovation</option>
+            <option value="teamwork">Teamwork</option>
+            <option value="customer-service">Customer Service</option>
+            <option value="leadership">Leadership</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="achievement-details">Achievement Details:</label>
+          <textarea
+            id="achievement-details"
+            name="achievement-details"
+            title="Achievement Details"
+            placeholder="Describe the achievement"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="impact">Impact of Achievement:</label>
+          <textarea
+            id="impact"
+            name="impact"
+            title="Impact of Achievement"
+            placeholder="Describe the impact of the achievement"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="recognition-date">Recognition Date:</label>
+          <input
+            type="date"
+            id="recognition-date"
+            name="recognition-date"
+            title="Recognition Date"
+            required
+          />
+          <small>Format: YYYY-MM-DD</small>
+        </div>
+
+        <div class="form-group">
+          <label for="recommended-reward">Recommended Reward:</label>
+          <select
+            id="recommended-reward"
+            name="recommended-reward"
+            title="Recommended Reward"
+            required
+          >
+            <option value="certificate">Certificate of Achievement</option>
+            <option value="bonus">Monetary Bonus</option>
+            <option value="gift">Gift</option>
+            <option value="time-off">Extra Time Off</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="additional-comments">Additional Comments:</label>
+          <textarea
+            id="additional-comments"
+            name="additional-comments"
+            title="Additional Comments"
+            placeholder="Enter any additional comments"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="special-instructions">Special Instructions/Notes:</label>
+          <textarea
+            id="special-instructions"
+            name="special-instructions"
+            title="Special Instructions"
+            placeholder="Enter any special instructions or notes"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit Recognition</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

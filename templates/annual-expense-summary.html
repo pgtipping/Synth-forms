@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Annual Expense Summary</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Annual Expense Summary</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+
+      <form id="expense-summary-form">
+        <div class="form-section">
+          <h2>Expense Details</h2>
+          <table id="expense-table">
+            <thead>
+              <tr>
+                <th>Account #</th>
+                <th>January</th>
+                <th>February</th>
+                <th>March</th>
+                <th>1st Quarter</th>
+                <th>April</th>
+                <th>May</th>
+                <th>June</th>
+                <th>2nd Quarter</th>
+                <th>July</th>
+                <th>August</th>
+                <th>September</th>
+                <th>3rd Quarter</th>
+                <th>October</th>
+                <th>November</th>
+                <th>December</th>
+                <th>4th Quarter</th>
+                <th>Annual Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="account-number"
+                    placeholder="Account #"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="monthly-expense"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="monthly-expense"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="monthly-expense"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="quarter-total"
+                    placeholder="0.00"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="monthly-expense"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="monthly-expense"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="monthly-expense"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="quarter-total"
+                    placeholder="0.00"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="monthly-expense"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="monthly-expense"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="monthly-expense"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="quarter-total"
+                    placeholder="0.00"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="monthly-expense"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="monthly-expense"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="monthly-expense"
+                    placeholder="0.00"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="quarter-total"
+                    placeholder="0.00"
+                    readonly
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="annual-total"
+                    placeholder="0.00"
+                    readonly
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="form-section">
+          <h2>Special Instructions/Notes</h2>
+          <textarea
+            id="special-instructions"
+            name="special-instructions"
+            title="Special Instructions"
+            placeholder="Enter any special instructions or notes"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit Summary</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

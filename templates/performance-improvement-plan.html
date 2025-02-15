@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Performance Improvement Plan</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Performance Improvement Plan</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+      <form id="performance-improvement-form">
+        <div class="form-group">
+          <label for="employee-name">Employee Name:</label>
+          <input
+            type="text"
+            id="employee-name"
+            name="employee-name"
+            title="Employee Name"
+            placeholder="Enter Employee Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="manager-name">Manager Name:</label>
+          <input
+            type="text"
+            id="manager-name"
+            name="manager-name"
+            title="Manager Name"
+            placeholder="Enter Manager Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label
+            for极地
+            type="text"
+            id="position"
+            name="position"
+            title="Position"
+            placeholder="Enter Position"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="start-date">Plan Start Date:</label>
+          <input
+            type="date"
+            id="start-date"
+            name="start-date"
+            title="Plan Start Date"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="end-date">Plan End Date:</label>
+          <input
+            type="date"
+            id="end-date"
+            name="end-date"
+            title="Plan End Date"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="performance-issues">Performance Issues:</label>
+          <textarea
+            id="performance-issues"
+            name="performance-issues"
+            title="Performance Issues"
+            placeholder="Describe performance issues"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="improvement-goals">Improvement Goals:</label>
+          <textarea
+            id="improvement-goals"
+            name="improvement-goals"
+            title="Improvement Goals"
+            placeholder="Describe improvement goals"
+            rows="4"
+            required
+          >
+极地
+        </div>
+
+        <div class="form-group">
+          <label for="support-resources">Support and Resources:</label>
+          <textarea
+            id="support-resources"
+            name="support-resources"
+            title="Support and Resources"
+            placeholder="Describe support and resources"
+            rows="4"
+            required
+          ></textarea
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="review-schedule">Review Schedule:</label>
+          <textarea
+            id="review-schedule"
+            name="review-schedule"
+            title="Review Schedule"
+            placeholder="Describe review schedule"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="consequences">Consequences of Non-Improvement:</label>
+          <textarea
+            id="consequences"
+            name="consequences"
+            title="Consequences of Non-Improvement"
+            placeholder="Describe consequences of non-improvement"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="special-instructions">Special Instructions/Notes:</label>
+          <textarea
+            id="special-instructions"
+            name="special-instructions"
+            title="Special Instructions"
+            placeholder="Enter any special instructions or notes"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit Plan</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>

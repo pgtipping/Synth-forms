@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Onboarding Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 p-6">
+    <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-8">
+      <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Employee Onboarding Form</h1>
+      <form id="onboarding-form" class="space-y-6">
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h2 class="text-xl font-semibold text-gray-700 mb-4">Custom Branding</h2>
+          <div class="space-y-4">
+            <input
+              type="text"
+              id="company-name"
+              title="Company Name"
+              placeholder="Enter Company Name"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+            <input
+              type="file"
+              id="logo-upload"
+              title="Company Logo"
+              placeholder="Upload Company Logo"
+              accept="image/*"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="form-group">
+            <label for="employee-name" class="block text-sm font-medium text-gray-700 mb-1">Employee Name:</label>
+            <input type="text" id="employee-name" name="employee-name" required 
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="position" class="block text-sm font-medium text-gray-700 mb-1">Position:</label>
+            <input type="text" id="position" name="position" required 
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="department" class="block text-sm font-medium text-gray-700 mb-1">Department:</label>
+            <input type="text" id="department" name="department" required 
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="start-date" class="block text-sm font-medium text-gray-700 mb-1">Start Date:</label>
+            <input type="date" id="start-date" name="start-date" required 
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+            <small class="text-gray-500">Format: YYYY-MM-DD</small>
+          </div>
+
+          <div class="form-group">
+            <label for="manager" class="block text-sm font-medium text-gray-700 mb-1">Manager/Supervisor:</label>
+            <input type="text" id="manager" name="manager" required 
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="work-location" class="block text-sm font-medium text-gray-700 mb-1">Work Location:</label>
+            <input type="text" id="work-location" name="work-location" required 
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="equipment-needs" class="block text-sm font-medium text-gray-700 mb-1">Equipment Needs:</label>
+            <textarea
+              id="equipment-needs"
+              name="equipment-needs"
+              rows="3"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="training-requirements" class="block text-sm font-medium text-gray-700 mb-1">Training Requirements:</label>
+            <textarea
+              id="training-requirements"
+              name="training-requirements"
+              rows="3"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="access-requests" class="block text-sm font-medium text-gray-700 mb-1">System Access Requests:</label>
+            <textarea
+              id="access-requests"
+              name="access-requests"
+              rows="3"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="emergency-contact" class="block text-sm font-medium text-gray-700 mb-1">Emergency Contact Information:</label>
+            <textarea
+              id="emergency-contact"
+              name="emergency-contact"
+              rows="3"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="special-instructions" class="block text-sm font-medium text-gray-700 mb-1">Special Instructions/Notes:</label>
+            <textarea
+              id="special-instructions"
+              name="special-instructions"
+              rows="3"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="flex space-x-4 pt-6">
+          <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors">
+            Submit Onboarding Form
+          </button>
+          <button type="button" id="download-pdf" class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors">
+            Download as PDF
+          </button>
+          <button type="button" id="download-word" class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors">
+            Download as Word
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+    <script src="/js/template-download.js"></script>
+
+    <script>
+      // Add print-specific styles for PDF export
+      if (window.matchMedia) {
+        const mediaQueryList = window.matchMedia('print');
+        mediaQueryList.addListener(function(mql) {
+          if (mql.matches) {
+            document.body.classList.remove('bg-gray-50', 'p-6');
+            const container = document.querySelector('.max-w-3xl');
+            container.classList.remove('shadow-lg');
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => button.style.display = 'none');
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

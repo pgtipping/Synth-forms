@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appraisal Form</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Appraisal Form</h1>
+      <div class="branding-section">
+        <h2>Custom Branding</h2>
+        <input
+          type="text"
+          id="company-name"
+          title="Company Name"
+          placeholder="Enter Company Name"
+        />
+        <input
+          type="file"
+          id="logo-upload"
+          title="Company Logo"
+          placeholder="Upload Company Logo"
+          accept="image/*"
+        />
+      </div>
+
+      <form id="appraisal-form">
+        <div class="form-section">
+          <h2>Employee Information</h2>
+          <div class="form-group">
+            <label for="employee-name">Employee Name:</label>
+            <input
+              type="text"
+              id="employee-name"
+              placeholder="Enter employee name"
+              title="Employee Name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="employee-id">Employee ID:</label>
+            <input
+              type="text"
+              id="employee-id"
+              placeholder="Enter employee ID"
+              title="Employee ID"
+            />
+          </div>
+          <div class="form-group">
+            <label for="job-title">Job Title:</label>
+            <input
+              type="text"
+              id="job-title"
+              placeholder="Enter job title"
+              title="Job Title"
+            />
+          </div>
+          <div class="form-group">
+            <label for="department">Department:</label>
+            <input
+              type="text"
+              id="department"
+              placeholder="Enter department"
+              title="Department"
+            />
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Performance Evaluation</h2>
+          <table id="performance-table">
+            <thead>
+              <tr>
+                <th>Criteria</th>
+                <th>Rating</th>
+                <th>Comments</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="criteria"
+                    placeholder="Enter criteria"
+                    title="Evaluation Criteria"
+                  />
+                </td>
+                <td>
+                  <select class="rating" title="Performance Rating">
+                    <option value="1">1 - Needs Improvement</option>
+                    <option value="2">2 - Meets Expectations</option>
+                    <option value="3">3 - Exceeds Expectations</option>
+                  </select>
+                </td>
+                <td>
+                  <textarea
+                    class="comments"
+                    placeholder="Enter comments"
+                    title="Evaluation Comments"
+                  ></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-criteria">Add Criteria</button>
+        </div>
+
+        <div class="form-section">
+          <h2>Development Goals</h2>
+          <table id="goals-table">
+            <thead>
+              <tr>
+                <th>Goal</th>
+                <th>Target Date</th>
+                <th>Progress</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="text"
+                    class="goal"
+                    placeholder="Enter goal"
+                    title="Development Goal"
+                  />
+                </td>
+                <td>
+                  <input type="date" class="target-date" title="Target Date" />
+                </td>
+                <td>
+                  <select class="progress" title="Goal Progress">
+                    <option value="not-started">Not Started</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="add-goal">Add Goal</button>
+        </div>
+
+        <div class="form-section">
+          <h2>Approval</h2>
+          <div class="form-group">
+            <label for="approval-date">Approval Date:</label>
+            <input type="date" id="approval-date" title="Approval Date" />
+          </div>
+          <div class="form-group">
+            <label for="approver-name">Approver Name:</label>
+            <input
+              type="text"
+              id="approver-name"
+              placeholder="Enter approver's name"
+              title="Approver Name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="approver-signature">Approver Signature:</label>
+            <canvas
+              id="approver-signature-pad"
+              width="400"
+              height="200"
+              title="Approver Signature"
+            ></canvas>
+            <button type="button" id="clear-approver-signature">
+              Clear Signature
+            </button>
+          </div>
+        </div>
+
+        <button type="submit">Submit Appraisal</button>
+        <button type="button" id="download-pdf">Download as PDF</button>
+        <button type="button" id="download-word">Download as Word</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  
+    <script src="/js/template-download.js"></script>
+  </body>
+</html>
