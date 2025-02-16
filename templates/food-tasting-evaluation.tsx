@@ -3,8 +3,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { foodTastingSchema, type FoodTastingForm, formFields } from '../app/forms/food-tasting-evaluation/schema';
-import { FormField } from '@/components/FormField';
+import { foodTastingSchema, type FoodTastingForm, formFields } from '@/app/forms/food-tasting-evaluation/schema';
+import { FormField } from '@/components/ui/form-field';
 
 export const FoodTastingEvaluationTemplate: React.FC = () => {
   const {

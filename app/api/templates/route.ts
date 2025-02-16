@@ -2,17 +2,17 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
-// Function to get template data from HTML files
+// Function to get template data from HTML and TSX files
 async function getTemplatesFromFiles() {
-  const templatesDir = path.join(process.cwd(), "app/templates");
+  const templatesDir = path.join(process.cwd(), "templates");
   
   try {
     const files = fs.readdirSync(templatesDir);
     
     return files
-      .filter(file => file.endsWith(".html"))
+      .filter(file => file.endsWith(".html") || file.endsWith(".tsx"))
       .map(file => {
-        const id = path.basename(file, ".html");
+        const id = path.basename(file, path.extname(file));
         const title = id
           .split("-")
           .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -26,11 +26,15 @@ async function getTemplatesFromFiles() {
         if (file.includes("project")) category = "Project Management";
         else if (file.includes("training")) category = "Training & Development";
         else if (file.includes("performance")) category = "Performance Management";
+        else if (file.includes("food")) category = "Food Services";
         
         // Generate tags from filename
         const tags = id.split("-").filter(tag => 
           !["form", "template", "v2"].includes(tag.toLowerCase())
         );
+
+        // Determine template type
+        const type = file.endsWith(".tsx") ? "COMPONENT" : "HTML";
         
         return {
           id,
@@ -38,6 +42,7 @@ async function getTemplatesFromFiles() {
           description: `Professional ${title.toLowerCase()} template for streamlined data collection and management.`,
           category,
           tags,
+          type,
           version: file.includes("v2") ? 2 : 1,
           status: "PUBLISHED",
           previewImage: `/previews/${id}.png`,
@@ -54,56 +59,48 @@ async function getTemplatesFromFiles() {
 
 // GET - Fetch all templates with pagination and search
 export async function GET(request: Request) {
-  try {
-    const { searchParams } = new URL(request.url);
-    const page = parseInt(searchParams.get("page") || "1");
-    const limit = parseInt(searchParams.get("limit") || "10");
-    const category = searchParams.get("category");
-    const query = searchParams.get("query")?.toLowerCase();
+  const { searchParams } = new URL(request.url);
+  const templateId = searchParams.get("templateId");
 
-    // Get templates from files
-    const templates = await getTemplatesFromFiles();
-    
-    // Filter templates
-    let filteredTemplates = templates;
-    
-    if (category) {
-      filteredTemplates = filteredTemplates.filter(
-        (template) => template.category === category
+  if (templateId) {
+    try {
+      // First try to find a TSX template
+      const tsxPath = path.join(process.cwd(), "templates", `${templateId}.tsx`);
+      if (fs.existsSync(tsxPath)) {
+        return NextResponse.json({ 
+          id: templateId,
+          type: "COMPONENT",
+          content: "" // We don't need to send the content for components
+        });
+      }
+
+      // Then try HTML template
+      const htmlPath = path.join(process.cwd(), "templates", `${templateId}.html`);
+      if (fs.existsSync(htmlPath)) {
+        const content = fs.readFileSync(htmlPath, "utf-8");
+        return NextResponse.json({ 
+          id: templateId,
+          type: "HTML",
+          content 
+        });
+      }
+
+      return NextResponse.json(
+        { error: "Template not found" },
+        { status: 404 }
+      );
+    } catch (error) {
+      console.error("Failed to read template:", error);
+      return NextResponse.json(
+        { error: "Failed to read template" },
+        { status: 500 }
       );
     }
-
-    if (query) {
-      filteredTemplates = filteredTemplates.filter(
-        (template) =>
-          template.title.toLowerCase().includes(query) ||
-          template.description.toLowerCase().includes(query) ||
-          template.tags.some(tag => tag.toLowerCase().includes(query))
-      );
-    }
-
-    // Calculate pagination
-    const total = filteredTemplates.length;
-    const start = (page - 1) * limit;
-    const end = start + limit;
-    const paginatedTemplates = filteredTemplates.slice(start, end);
-
-    return NextResponse.json({
-      templates: paginatedTemplates,
-      pagination: {
-        total,
-        totalPages: Math.ceil(total / limit),
-        currentPage: page,
-        perPage: limit,
-      },
-    });
-  } catch (error) {
-    console.error("Failed to fetch templates:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch templates" },
-      { status: 500 }
-    );
   }
+
+  // List all templates
+  const templates = await getTemplatesFromFiles();
+  return NextResponse.json(templates);
 }
 
 // POST - Create new template
@@ -126,7 +123,7 @@ export async function POST(request: Request) {
       .replace(/(^-|-$)/g, "");
       
     // Save template file
-    const templatesDir = path.join(process.cwd(), "app/templates");
+    const templatesDir = path.join(process.cwd(), "templates");
     
     // Create templates directory if it doesn't exist
     if (!fs.existsSync(templatesDir)) {
