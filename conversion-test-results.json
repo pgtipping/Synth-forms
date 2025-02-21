@@ -1,8 +1,305 @@
-[
-  {
-    "approach": "Direct DOCX",
-    "duration": 452,
-    "fieldCount": 12,
-    "confidence": 1
-  }
-]
+{
+  "approach": "excel-direct",
+  "duration": 101,
+  "fieldCount": 17,
+  "confidence": 1,
+  "fields": [
+    {
+      "label": "Skill Proficiency Ratings/Interpretations",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "Novice: Has no Knowledge or Exposure to the skill area/subject",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "Can do with help: Has basic knowledge/experience though requires some assistance/supervision",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "Can do without help: Has acquired skill through training/experience on the job and does not require supervision",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "Expert: Has extensive knowledge and experience and can teach/coach others",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "CURRENT PROFICIENCY LEVEL",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "DESIRED PROFICIENCY LEVEL",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "TO BE ACQUIRED THROUGH:",
+      "type": "text",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "BROAD SKILL / COMPETENCY",
+      "type": "text",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "ON THE JOB EXPERIENCE",
+      "type": "text",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "Has the ability to convert service failures to rich customer experiences",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "Can use the cost of quality concept and other quality measures to prioritise improvements and track performance levels",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "Knows how to rate credits, and price according to risk ratings",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "Can proactively identify delinquency and plan strategies for remedial management",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "Knows how to identify and prospect for customers in line with the company's mission and maintain relationships with them",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false,
+      "helpText": "Can differentiate between customers by identiffying specific customer values and needs and marketing products/services that match these values/needs."
+    },
+    {
+      "label": "Can differentiate between customers by identiffying specific customer values and needs and marketing products/services that match these values/needs.",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    },
+    {
+      "label": "Knows how to target ideal market segments for company's products and services and position accordingly",
+      "type": "rating",
+      "section": "Can determine the customer actual funding needs based on the available information",
+      "required": false
+    }
+  ],
+  "sections": [
+    {
+      "title": "CURRENT PROFICIENCY LEVEL",
+      "fields": []
+    },
+    {
+      "title": "DESIRED PROFICIENCY LEVEL",
+      "fields": []
+    },
+    {
+      "title": "TO BE ACQUIRED THROUGH:",
+      "fields": []
+    },
+    {
+      "title": "DEPTH OF TRAINING REQUIRED",
+      "fields": []
+    },
+    {
+      "title": "BROAD SKILL / COMPETENCY",
+      "fields": []
+    },
+    {
+      "title": "JOB SPECIFIC COMPETENCIES",
+      "fields": []
+    },
+    {
+      "title": "NOVICE",
+      "fields": []
+    },
+    {
+      "title": "CAN DO WITH HELP",
+      "fields": []
+    },
+    {
+      "title": "CAN DO WITHOUT HELP",
+      "fields": []
+    },
+    {
+      "title": "EXPERT",
+      "fields": []
+    },
+    {
+      "title": "NOVICE",
+      "fields": []
+    },
+    {
+      "title": "CAN DO WITH HELP",
+      "fields": []
+    },
+    {
+      "title": "CAN DO WITHOUT HELP",
+      "fields": []
+    },
+    {
+      "title": "EXPERT",
+      "fields": []
+    },
+    {
+      "title": "ON THE JOB EXPERIENCE",
+      "fields": []
+    },
+    {
+      "title": "TRAINING PROGRAM",
+      "fields": []
+    },
+    {
+      "title": "SELF DEVELOPMENT",
+      "fields": []
+    },
+    {
+      "title": "BASIC",
+      "fields": []
+    },
+    {
+      "title": "ADVANCED",
+      "fields": []
+    },
+    {
+      "title": "EXPERT",
+      "fields": []
+    },
+    {
+      "title": "EXPERT",
+      "fields": []
+    },
+    {
+      "title": "Can determine the customer actual funding needs based on the available information",
+      "fields": [
+        {
+          "label": "Skill Proficiency Ratings/Interpretations",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "Novice: Has no Knowledge or Exposure to the skill area/subject",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "Can do with help: Has basic knowledge/experience though requires some assistance/supervision",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "Can do without help: Has acquired skill through training/experience on the job and does not require supervision",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "Expert: Has extensive knowledge and experience and can teach/coach others",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "CURRENT PROFICIENCY LEVEL",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "DESIRED PROFICIENCY LEVEL",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "TO BE ACQUIRED THROUGH:",
+          "type": "text",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "BROAD SKILL / COMPETENCY",
+          "type": "text",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "ON THE JOB EXPERIENCE",
+          "type": "text",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "Has the ability to convert service failures to rich customer experiences",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "Can use the cost of quality concept and other quality measures to prioritise improvements and track performance levels",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "Knows how to rate credits, and price according to risk ratings",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "Can proactively identify delinquency and plan strategies for remedial management",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "Knows how to identify and prospect for customers in line with the company's mission and maintain relationships with them",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false,
+          "helpText": "Can differentiate between customers by identiffying specific customer values and needs and marketing products/services that match these values/needs."
+        },
+        {
+          "label": "Can differentiate between customers by identiffying specific customer values and needs and marketing products/services that match these values/needs.",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        },
+        {
+          "label": "Knows how to target ideal market segments for company's products and services and position accordingly",
+          "type": "rating",
+          "section": "Can determine the customer actual funding needs based on the available information",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

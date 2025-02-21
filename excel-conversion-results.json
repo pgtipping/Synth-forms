@@ -1,0 +1,1023 @@
+{
+  "approach": "office-converter",
+  "duration": 54,
+  "fieldCount": 35,
+  "confidence": 1,
+  "fields": [
+    {
+      "type": "rating",
+      "label": "Can effectively and efficiently manage the design and delivery of delightful customer service",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Has the ability to convert service failures to rich customer experiences",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Has a good understanding of the customer value chain and how to effectively leverage on it to deliver exceptional service to the customer",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can design the analytical framework necessary to understand what customers value, and where to concentrate improvement efforts",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can apply the cross-functional nature of customer satisfaction in the modern business environment",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Understand current best practices and cutting edge concepts and methods in customer satisfaction and quality",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can apply key concepts of quality service to the company job environment",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can use basic quality tools in process improvement initiatives",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can use the cost of quality concept and other quality measures to prioritise improvements and track performance levels",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can prepare and implement quality plans",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can interprete and analyse financial statements",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can summarise transactions to produce a meanful financial statements",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Knows how to use the financial statement of a business as a tool for credit decisions",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Knows how to review credit applications and analyse financial information such that well conceived recommendations can be made on application for facility",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Knows how to assess credit risks in line with observed peculiarities of each company and the industry",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Knows and understand the requirements for managing a portfolio of credit facilities",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Knows how to structure facilities tin line with the borrowers need and cash generation capacity",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Knows how to rate credits, and price according to risk ratings",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Knows how to structure and manage loans that meet the risk peculiarities",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can explain the legal issues in credit documentation",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can determine the customer actual funding needs based on the available information",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can proactively identify delinquency and plan strategies for remedial management",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can explain the financing implications of the company's corporate strategy on the lending postion at every point in time",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Knows how to evaluate risk inherent in a credit request",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Knows how to structure syndications and lease agreements that fit client's cashflow and business requirements",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can analyse international risk exposure issues and implications for the company",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Knows how to identify and prospect for customers in line with the company's mission and maintain relationships with them",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can differentiate between customers by identiffying specific customer values and needs and marketing products/services that match these values/needs.",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can set goals and objectives that fit the marketing call spectrum",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can describe the business etiquette required for professional relationship management",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can explain the key concepts and principles of marketing and describe the different orientations companies adopt to the marketplace",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can establish a framework for collecting and analysing market information and competitor intelligence data",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Knows how to target ideal market segments for company's products and services and position accordingly",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Knows how to develop innovative products and product introduction strategies",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "label": "Can write a coherent, well-organized marketing plan",
+      "required": true,
+      "ratingScale": {
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "labels": {
+          "1": "Novice",
+          "2": "Can do with help",
+          "3": "Can do without help",
+          "4": "Expert"
+        },
+        "style": "numeric"
+      },
+      "validation": [
+        {
+          "type": "required"
+        },
+        {
+          "type": "number",
+          "params": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      ]
+    }
+  ]
+}

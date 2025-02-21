@@ -8,6 +8,9 @@ import uvicorn
 import cv2
 import pytesseract
 import re
+import subprocess
+import tempfile
+import os
 from typing import List, Dict, Any, Tuple
 import torch
 
@@ -24,8 +27,8 @@ except Exception as e:
     print("Falling back to Tesseract OCR only")
     USE_LAYOUTLM = False
 
-# Set Tesseract path
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# Set Tesseract path for Linux container
+pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
 
 def preprocess_image(image: Image.Image) -> Image.Image:
     # Convert to numpy array
@@ -229,18 +232,54 @@ def process_with_tesseract(ocr_data: dict) -> List[Dict[str, Any]]:
     
     return fields
 
+def convert_excel_to_pdf(content: bytes) -> bytes:
+    with tempfile.NamedTemporaryFile(suffix='.xlsx', delete=False) as temp_in:
+        temp_in.write(content)
+        temp_in_path = temp_in.name
+    
+    temp_out_path = temp_in_path.replace('.xlsx', '.pdf')
+    
+    try:
+        # Convert Excel to PDF using LibreOffice
+        cmd = ['soffice', '--headless', '--convert-to', 'pdf', '--outdir', 
+               os.path.dirname(temp_out_path), temp_in_path]
+        subprocess.run(cmd, check=True)
+        
+        # Read the PDF content
+        with open(temp_out_path, 'rb') as f:
+            pdf_content = f.read()
+            
+        return pdf_content
+    finally:
+        # Clean up temporary files
+        os.unlink(temp_in_path)
+        if os.path.exists(temp_out_path):
+            os.unlink(temp_out_path)
+
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     try:
         # Read file content
         content = await file.read()
         
+        # Handle Excel files
+        if file.filename.lower().endswith(('.xlsx', '.xls')):
+            try:
+                content = convert_excel_to_pdf(content)
+            except Exception as e:
+                raise HTTPException(status_code=500, 
+                                  detail=f"Failed to convert Excel to PDF: {str(e)}")
+        
         # Convert to image
         try:
             pages = convert_from_bytes(content)
             image = pages[0]
-        except Exception:
-            image = Image.open(BytesIO(content)).convert("RGB")
+        except Exception as e:
+            try:
+                image = Image.open(BytesIO(content)).convert("RGB")
+            except Exception:
+                raise HTTPException(status_code=400, 
+                                  detail="Failed to convert file to image. Supported formats: PDF, Excel, or image files")
         
         # Preprocess image
         processed_image = preprocess_image(image)
@@ -273,6 +312,7 @@ async def predict(file: UploadFile = File(...)):
         }
         
     except Exception as e:
+        print(f"Error processing file: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":

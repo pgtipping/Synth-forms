@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import { JobCompetencyAssessmentTemplate } from '@/templates/job-competency-assessment';
 
 // Function to get template data from HTML and TSX files
 async function getTemplatesFromFiles() {
@@ -57,6 +58,15 @@ async function getTemplatesFromFiles() {
   }
 }
 
+const templates = {
+  'job-competency-assessment': {
+    id: 'job-competency-assessment',
+    name: 'Job Competency Assessment',
+    description: 'Form for evaluating employee job competencies and performance',
+    component: JobCompetencyAssessmentTemplate,
+  },
+};
+
 // GET - Fetch all templates with pagination and search
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -99,8 +109,9 @@ export async function GET(request: Request) {
   }
 
   // List all templates
-  const templates = await getTemplatesFromFiles();
-  return NextResponse.json(templates);
+  const templatesFromFiles = await getTemplatesFromFiles();
+  const allTemplates = [...templatesFromFiles, ...Object.values(templates)];
+  return NextResponse.json(allTemplates);
 }
 
 // POST - Create new template

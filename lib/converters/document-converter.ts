@@ -3,8 +3,8 @@ import { join } from 'path';
 import * as libre from 'libreoffice-convert';
 import { promisify } from 'util';
 import { v4 as uuidv4 } from 'uuid';
-import { detectOfficeWatermark } from './office-watermark';
-import { convertAsync } from './office-watermark';
+import { detectOfficeWatermark } from '../office-watermark';
+import { convertAsync } from '../office-watermark';
 
 interface ConversionOptions {
   outputFormat: 'pdf' | 'png';

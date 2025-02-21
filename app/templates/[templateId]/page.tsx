@@ -3,9 +3,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import { notFound } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { FoodTastingEvaluationTemplate } from "@/templates/food-tasting-evaluation";
+import { JobCompetencyAssessmentTemplate } from '@/templates/job-competency-assessment';
 
 interface Template {
   content: string;
@@ -13,10 +15,11 @@ interface Template {
   id: string;
 }
 
-type TemplateId = "food-tasting-evaluation";
+type TemplateId = "food-tasting-evaluation" | "job-competency-assessment";
 
 const TEMPLATE_COMPONENTS: Record<TemplateId, React.ComponentType> = {
   "food-tasting-evaluation": FoodTastingEvaluationTemplate,
+  "job-competency-assessment": JobCompetencyAssessmentTemplate,
   // Add other templates here as we create them
 };
 
@@ -93,6 +96,17 @@ export default function TemplatePage() {
   const TemplateComponent = template.type === "COMPONENT" && template.id in TEMPLATE_COMPONENTS
     ? TEMPLATE_COMPONENTS[template.id as TemplateId]
     : null;
+
+  const templates = {
+    'job-competency-assessment': JobCompetencyAssessmentTemplate,
+    'food-tasting-evaluation': FoodTastingEvaluationTemplate,
+  };
+
+  const Template = templates[params.templateId as TemplateId];
+
+  if (!Template) {
+    notFound();
+  }
 
   return (
     <div className="container mx-auto p-6">
